@@ -1,0 +1,44 @@
+Background
+
+Helecopter is a classic game where you adjust the height of your hover
+to avoid crashing into floating objects in your path. It is a one player
+game that can be multiplayer in the style that one player goes at a time
+and their scores are compared. Score is based on distance travelled and
+depending on implementation, objects destroyed.
+
+Functionality & MVP
+
+Users will be able to:
+
+Start, pause, reset the game
+Move up and down.
+Shoot objects
+
+In addition this project will include
+
+Floating objects which approach the user
+A production read me.
+An intoduction page.
+
+Architecture and technologies.
+
+Vanilla JavaScript and jQuery for overall structure and game logic
+Easel.js with HTML 5 Canvas for DOM manipluation and rendering
+Webpack to bundle and serve up the various scripts.
+
+There will be three main scripts.
+
+Board.js - will handle placing objects scoring.
+User.js - will handle user movements.
+Obstacle.js - will handle obstacle generation and movements.
+
+Implementation timeline.
+
+Day 1. Set up necessary Node modules, including getting webpack and
+Easel.js installed. Write a basic entry file.
+
+Day 2. Learn Easel. Build User and Obstacle, and connect them to Board.
+
+Day 3. Create the logic of interaction.
+
+Day 4. Set up controlls. Polish game. 
