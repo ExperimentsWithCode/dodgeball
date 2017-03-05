@@ -3,17 +3,21 @@
   <head>
     <title>Dodgeball</title>
     <link href="https://fonts.googleapis.com/css?family=Pangolin|Permanent+Marker" rel="stylesheet">
+    <link href="./css/main.scss" rel="stylesheet">
+
   </head>
 
-  <body style="background-color:#FFF000;">
-    <h1> My Game </h1>
-    <canvas id="canvas" width="600" height="400"></canvas>
-    <h1> Instructions Unclear </h1>
+  <body style="background-color:#FFF000">
+    <section class="content">
+      <h1>Dodge, duck, dip, dive, and dodge!</h1>
+      <canvas id="canvas" width="600" height="400"></canvas>
+      <h1> Instructions Unclear </h1>
 
-    <script type="application/javascript" src="lib/bundle.js"></script>
-    <div style="display:none;">
-      <img id="dodgeball" src="./img/dodgeball.png"
-           width="55px" height="55px">
-    </div>
+      <script type="application/javascript" src="lib/bundle.js"></script>
+      <div style="display:none;">
+        <img id="dodgeball" src="./img/dodgeball.png"
+             width="55px" height="55px">
+      </div>
+    </section>
   </body>
 </html>
