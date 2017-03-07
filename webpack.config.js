@@ -15,7 +15,8 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
         query: {
-          presets: ['es2016']
+            "presets": ["es2015"],
+            "plugins": ["transform-async-to-generator"]
         }
       }
     ]
