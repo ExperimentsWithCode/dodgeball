@@ -1,6 +1,6 @@
 Background
 
-helicopter is a classic game where you adjust the height of your hover
+player is a classic game where you adjust the height of your hover
 to avoid crashing into floating objects in your path. It is a one player
 game that can be multiplayer in the style that one player goes at a time
 and their scores are compared. Score is based on distance travelled and
