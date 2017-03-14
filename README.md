@@ -1,6 +1,7 @@
 # Dodgeball
 
 ### Live Site
+http://MeirGalimidi.com/dodgeball
 
 ## Overview
 Dodge the incoming dodgeballs for as long as you can. The chance of a ball being thrown gradually increases with time. Hold down the arrow keys, or WASD keys to control your character, and use the spacebar too in order to double your speed.   
@@ -21,13 +22,5 @@ Dodge the incoming dodgeballs for as long as you can. The chance of a ball being
 
 * The dodgeball interactions are set to only transfer dy speed. It provides a more avoidable, predictable environment for the Player. In order to minimize traveling entanglements, the game runs at 64 frames a second [1]. In order to minimize spawn entanglements, a collision check is run before placement, and skipped if a collision is eminent.
 
-
-## To Do's
-* add background music
-* add "Game Over Screen"
-  * This will give user time to stop pressing keys before home screen
-* add items for additional points.
-  * Items may temporarily affect board attributes.
-* Pause/Quit functionality
 
 [1] If the general speed of the game is increased this will be revisited.
