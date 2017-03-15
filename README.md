@@ -18,9 +18,9 @@ Dodge the incoming dodgeballs for as long as you can. The chance of a ball being
 ## Technical Implementations
 
 ### Difficulty and variety
-* In order to have varying difficulty and variety, the dodgeball spawn rate is adjustable. The number of dodgeballs that can be spawned per frame are set by the difficulty selected by the user. The chance that a ball is spawned that frame is automatically adjusted per frame by 0.00001%. This percent chance is displayed to the user in rounded form, as the level.
+* In order to have varying difficulty and variety, the dodgeball spawn rate is adjustable. The number of dodgeballs that can be spawned per frame are set by the difficulty selected by the user with the arrow keys on the homescreen. The chance that a ball is spawned that frame is automatically adjusted per frame by 0.00001%. This percent chance is displayed to the user in rounded form, as the level.
 
-![Game View](img/SelectLevel.gif)
+![Adjusting difficulty](img/SelectLevel.gif)
 
 
 * When spawned, dodgeballs are set to the same dx speed as the standard speed of the Player. Their dy speed is set to randomly generated single digit number between 0 and 5. This ensures a more focused forward movement, and can be used as a point adjusted for future tweaks to difficulty. The y-cord is set to random percentage of canvas height.
@@ -57,9 +57,8 @@ collideWith(otherObject) {
 		}
   }
 ```
-![Game View](img/Speed.gif)
+![Display speed difference](img/Speed.gif)
 
+* The first second after a death, controls are disabled so a player does not accidentally start a new game or adjust the difficulty due to pressing the controls to play. 
 
 [1] If the general speed of the game is increased this will be revisited.
-
-*
