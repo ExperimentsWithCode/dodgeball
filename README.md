@@ -38,24 +38,33 @@ collideWith(otherObject) {
       const otherVelY = otherObject.vel[1]
       this.vel[1] = otherVelY
       otherObject.vel[1] = thisVelY
-    }
+  }
 }
 ```
 
 * The spacebar is used to double the players speed. This allows a bit more variety in gameplay, and can be the basis for future item interactions with player speed.
 
 ```ruby
-collideWith(otherObject) {
-  if (otherObject instanceof player) {
-    otherObject.relocate()
-    return true
-  } else {
-			const thisVelY = this.vel[1]
-			const otherVelY = otherObject.vel[1]
-			this.vel[1] = otherVelY
-			otherObject.vel[1] = thisVelY
-		}
+const MOVES = () => {
+  let velocity =  [0,0]
+  if (KEYS.left || KEYS.a){
+    velocity[0] -= standardSpeed
   }
+  if (KEYS.right || KEYS.d){
+    velocity[0] += standardSpeed
+  }
+  if (KEYS.up || KEYS.w){
+    velocity[1] -= standardSpeed
+  }
+  if (KEYS.down || KEYS.s){
+    velocity[1] += standardSpeed
+  }
+  if (KEYS.space){
+    velocity[0] *= 2
+    velocity[1] *= 2
+  }
+  return velocity
+};
 ```
 ![Display speed difference](img/Speed.gif)
 
