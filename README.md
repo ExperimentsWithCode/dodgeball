@@ -28,8 +28,7 @@ Dodge the incoming dodgeballs for as long as you can. The chance of a ball being
 
 * The dodgeball interactions are set to only transfer dy speed. It provides a more avoidable, predictable environment for the Player. In order to minimize traveling entanglements, the game runs at 64 frames a second [1]. In order to minimize spawn entanglements, a collision check is run before placement, and skipped if a collision is eminent.
 
-```
-// collision interactions
+```ruby
 collideWith(otherObject) {
   if (otherObject instanceof player) {
     otherObject.relocate()
@@ -39,26 +38,27 @@ collideWith(otherObject) {
       const otherVelY = otherObject.vel[1]
       this.vel[1] = otherVelY
       otherObject.vel[1] = thisVelY
-  }
+    }
 }
 ```
 
 * The spacebar is used to double the players speed. This allows a bit more variety in gameplay, and can be the basis for future item interactions with player speed.
 
-```  collideWith(otherObject) {
-    if (otherObject instanceof player) {
-      otherObject.relocate()
-      return true
-    } else {
-				const thisVelY = this.vel[1]
-				const otherVelY = otherObject.vel[1]
-				this.vel[1] = otherVelY
-				otherObject.vel[1] = thisVelY
+```ruby
+collideWith(otherObject) {
+  if (otherObject instanceof player) {
+    otherObject.relocate()
+    return true
+  } else {
+			const thisVelY = this.vel[1]
+			const otherVelY = otherObject.vel[1]
+			this.vel[1] = otherVelY
+			otherObject.vel[1] = thisVelY
 		}
   }
 ```
 ![Display speed difference](img/Speed.gif)
 
-* The first second after a death, controls are disabled so a player does not accidentally start a new game or adjust the difficulty due to pressing the controls to play. 
+* The first second after a death, controls are disabled so a player does not accidentally start a new game or adjust the difficulty due to pressing the controls to play.
 
 [1] If the general speed of the game is increased this will be revisited.
